@@ -15,10 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: hello world
-        run: echo "Hey guys.. ${REPO} - ${GH_TOKEN}"
+        run: echo "Hey guys.. ${{env.REPO}} - ${{env.GH_TOKEN}}"
         shell: bash
     env:
-      GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      GH_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
       REPO: ${{github.event.repository.name}}
 
 
