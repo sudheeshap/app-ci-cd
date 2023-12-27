@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: hello world
-        run: echo "Hey guys.. ${{env.REPO}} - ${{env.GH_TOKEN}}"
+        run: echo "Hey guys.. ${{env.REPO}} - ${{env.GH_TOKEN}}" && npm test
         shell: bash
     env:
       GH_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
