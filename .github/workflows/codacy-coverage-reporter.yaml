@@ -15,9 +15,6 @@ jobs:
 
       - name: Run tests and create coverage
         run: npm test -- --coverage
-      
-      - name: View files
-        run: ls -la
 
       - name: Run codacy-coverage-reporter
         uses: codacy/codacy-coverage-reporter-action@v1

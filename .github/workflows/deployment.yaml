@@ -10,15 +10,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  hello:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Show Hello World
-        run: echo "Hey guys ${{env.REPO}} - ${{env.GH_TOKEN}}"
-      
-      - name: Run Shell Script
-        run: ./scripts/my-setup.sh
+      - name: Lint Code
+        run: npm run lint
     env:
       GH_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
       REPO: ${{github.event.repository.name}}
+  
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to s3
+        run: ./scripts/my-setup.sh
