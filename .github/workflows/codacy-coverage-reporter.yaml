@@ -9,13 +9,18 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
       - name: Run npm install and test
         run: npm ci && npm test
-      - name: View files
-        run: ls -la
+
       - name: Run codacy-coverage-reporter
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: coverage/lcov.info
+          depends-on: Run npm install and test
+
+      - name: View files
+        run: ls -la
+
         
