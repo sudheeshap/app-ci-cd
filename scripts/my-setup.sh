@@ -2,5 +2,7 @@
 
 echo "Hello from the shell script!"
 npm install
-npm run lint
-npm run build
+# npm run build
+npm run test
+bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r ./coverage/lcov.info
+
