@@ -1,4 +1,7 @@
 {
   "plugins": ["react"],
-  "extends": ["eslint:recommended", "next"]
+  "extends": ["eslint:recommended", "next"],
+  "env": {
+    "jest": true
+  }
 }
