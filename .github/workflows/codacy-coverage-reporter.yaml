@@ -3,31 +3,25 @@ name: Codacy Coverage Reporter
 on: ["push"]
 
 jobs:
-  run-tests:
-    runs-on: ubuntu-latest
-    name: Run npm install and test
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Run npm install and test
-        run: npm i && npm test
-
   codacy-coverage-reporter:
-    needs: run-tests
     runs-on: ubuntu-latest
     name: Codacy Coverage Reporter
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: Run tests and create coverage
+        run: npm test -- --coverage
+      
+      - name: View files
+        run: ls -la
+
       - name: Run codacy-coverage-reporter
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
           coverage-reports: coverage/lcov.info
-          
-      - name: View files
-        run: ls -la
+
+      
 
         
