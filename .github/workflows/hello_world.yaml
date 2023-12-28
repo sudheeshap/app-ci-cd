@@ -15,23 +15,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: hello world
-        run: echo "Hey guys.. ${{env.REPO}} - ${{env.GH_TOKEN}}" && npm ci && npm test
+        run: echo "Hey guys.. ${{env.REPO}} - ${{env.GH_TOKEN}}" && npm i && npm test
         shell: bash
     env:
       GH_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
       REPO: ${{github.event.repository.name}}
 
 
-  codacy-coverage-reporter:
+  goodbye:
     runs-on: ubuntu-latest
-    name: codacy-coverage-reporter
-    steps:
-      - uses: actions/checkout@v4
-      - name: Run codacy-coverage-reporter
-        uses: codacy/codacy-coverage-reporter-action@v1
-        with:
-          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          coverage-reports: ../coverage/lcov.info
+    steps: 
+      - name: goodbye world
+        run: echo "Goodbye guys.."
+        shell: bash
 
 
 
