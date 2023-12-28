@@ -1,4 +1,4 @@
-name: Hello World
+name: Lint, Build and Deploy to s3 bucket
 
 on:
   push:
