@@ -26,3 +26,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Deploy to s3
         run: ./scripts/my-setup.sh
+    env:
+      CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
