@@ -22,12 +22,16 @@ jobs:
       REPO: ${{github.event.repository.name}}
 
 
-  goodbye:
+  codacy-coverage-reporter:
     runs-on: ubuntu-latest
-    steps: 
-      - name: goodbye world
-        run: echo "Goodbye guys.."
-        shell: bash
+    name: codacy-coverage-reporter
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run codacy-coverage-reporter
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: ./coverage/lcov.info
 
 
 
