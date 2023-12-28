@@ -1,7 +1,8 @@
 'use client';
 
+import React, { useEffect } from 'react';
+
 import { usePosts } from '@/app/hooks/use-posts';
-import React from 'react';
 
 const List = () => {
   const { posts } = usePosts();

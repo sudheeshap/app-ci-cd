@@ -2,5 +2,5 @@
 
 echo "Hello from the shell script!"
 npm install
-npm lint
+npm run lint
 npm run build
