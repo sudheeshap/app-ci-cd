@@ -1,4 +1,4 @@
-name: Lint, Build and Deploy to s3 bucket
+name: Test and Deploy to Vercel
 
 on:
   push:
@@ -10,15 +10,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Lint Code
-        run: npm run lint
-    env:
-      GH_TOKEN: ${{secrets.MY_GITHUB_TOKEN}}
-      REPO: ${{github.event.repository.name}}
   
   upload-coverage:
     runs-on: ubuntu-latest
@@ -33,6 +24,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          npm install
+          npm run lint
+          npm run test
+
       - name: Deploy app to Vercel
         run: ./scripts/deploy-vercel.sh
     env:
