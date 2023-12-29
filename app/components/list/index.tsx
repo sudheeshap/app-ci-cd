@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { usePosts } from '@/app/hooks/use-posts';
 
