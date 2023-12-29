@@ -1,11 +1,11 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 
-import Header from '.';
+import Home from './page';
 
-describe('Header', () => {
+describe('Page', () => {
   it('renders a heading', () => {
-    render(<Header />);
+    render(<Home />);
 
     const heading = screen.getByTestId('header');
 
