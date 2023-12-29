@@ -1,8 +1,12 @@
 #!/bin/bash
 
-echo "Hello from the shell script!"
+echo "Uploading coverage to Codacy..."
 npm install
-# npm run build
 npm test -- --coverage
 bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r ./coverage/lcov.info
-
+echo "Uploading coverage Done!"
+# npm run build
+echo "Deploying app to Vercel.."
+npm install -g vercel
+vercel --prod
+echo "Deploying to Vercel Done!"
