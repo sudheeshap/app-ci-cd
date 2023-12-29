@@ -7,7 +7,7 @@ describe('Header', () => {
   it('renders a heading', () => {
     render(<Header />);
 
-    const heading = screen.getByTestId('header');
+    const heading = screen.getByTestId('headerx');
 
     expect(heading).toBeInTheDocument();
   });
