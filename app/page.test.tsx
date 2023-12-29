@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import { waitFor, render, screen } from '@testing-library/react';
 
 import Home from './page';
 
@@ -9,6 +9,6 @@ describe('Page', () => {
 
     const heading = screen.getByTestId('header');
 
-    expect(heading).toBeInTheDocument();
+    waitFor(() => expect(heading).toBeInTheDocument());
   });
 });

@@ -13,7 +13,9 @@ const List = () => {
       data-testid="list"
     >
       {posts.map((post) => (
-        <div key={post.id}>{post.title}</div>
+        <div key={post.id} data-testid="post">
+          {post.title}
+        </div>
       ))}
     </div>
   );
