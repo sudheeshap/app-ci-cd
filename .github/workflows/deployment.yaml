@@ -1,0 +1,36 @@
+name: Test and Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  
+  upload-coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Upload coverage to Codacy
+        run: ./scripts/upload-coverage.sh
+    env:
+      CODACY_PROJECT_TOKEN: ${{ secrets.CODACY_PROJECT_TOKEN }}
+  
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run lint and tests
+        run: |
+          npm install
+          npm run lint
+          npm run test
+
+      - name: Deploy app to Vercel
+        run: ./scripts/deploy-vercel.sh
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
