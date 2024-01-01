@@ -1,4 +1,5 @@
-[![Hello World](https://github.com/sudheeshap/app-ci-cd/actions/workflows/hello_world.yaml/badge.svg)](https://github.com/sudheeshap/app-ci-cd/actions/workflows/hello_world.yaml)
+[![Codacy Coverage Reporter](https://github.com/sudheeshap/app-ci-cd/actions/workflows/codacy-coverage-reporter.yaml/badge.svg)](https://github.com/sudheeshap/app-ci-cd/actions/workflows/codacy-coverage-reporter.yaml)
+[![Test and Deploy to Vercel](https://github.com/sudheeshap/app-ci-cd/actions/workflows/deployment.yaml/badge.svg)](https://github.com/sudheeshap/app-ci-cd/actions/workflows/deployment.yaml)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
