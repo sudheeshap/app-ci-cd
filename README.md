@@ -1,5 +1,5 @@
-[![Codacy Coverage Reporter](https://github.com/sudheeshap/app-ci-cd/actions/workflows/codacy-coverage-reporter.yaml/badge.svg)](https://github.com/sudheeshap/app-ci-cd/actions/workflows/codacy-coverage-reporter.yaml)
-[![Test and Deploy to Vercel](https://github.com/sudheeshap/app-ci-cd/actions/workflows/deployment.yaml/badge.svg)](https://github.com/sudheeshap/app-ci-cd/actions/workflows/deployment.yaml)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/28b3a65a32714509b1863617bedf6fb2)](https://app.codacy.com/gh/sudheeshap/app-ci-cd/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/28b3a65a32714509b1863617bedf6fb2)](https://app.codacy.com/gh/sudheeshap/app-ci-cd/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_coverage)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
