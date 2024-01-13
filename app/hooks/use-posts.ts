@@ -7,7 +7,7 @@ export function usePosts() {
 
   const fetchPosts = async () => {
     const posts: PostType[] = await fetch(
-      'https://jsonplaceholder.typicode.com/posts'
+      'https://jsonplaceholder.typicode.com/posts',
     )
       .then((response) => response.json())
       .then((data) => data);

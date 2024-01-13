@@ -9,7 +9,8 @@
     "lint": "next lint",
     "test": "jest",
     "prepare": "husky install",
-    "format": "prettier --write ."
+    "format": "prettier --write ./app",
+    "check:types": "tsc --noEmit"
   },
   "dependencies": {
     "next": "14.0.4",
@@ -45,14 +46,18 @@
       "eslint --fix"
     ],
     "*.html": [
-      "prettier --write",
-      "eslint --fix"
+      "prettier --write"
     ],
     "*.{scss,css}": [
       "prettier --write"
     ],
     "*.json": [
       "prettier --write"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   }
 }
