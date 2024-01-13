@@ -6,7 +6,7 @@ import List from '.';
 window.fetch = jest.fn(() =>
   Promise.resolve({
     json: () => Promise.resolve([{ id: 1, title: 'title1' }]),
-  })
+  }),
 ) as jest.Mock;
 
 describe('List', () => {
