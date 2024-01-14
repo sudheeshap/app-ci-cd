@@ -1,0 +1,20 @@
+# Use a Node.js image suitable for development
+FROM node:20 as development
+
+# Set the working directory inside the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json to the container
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application code to the container
+COPY . .
+
+# Expose the default Next.js development port
+EXPOSE 3000
+
+# Start the application in development mode
+CMD ["npm", "run", "dev"]

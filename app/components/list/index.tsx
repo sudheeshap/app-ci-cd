@@ -9,7 +9,7 @@ const List = () => {
 
   return (
     <div
-      className="bg-slate-400 py-5 w-full text-center m-0"
+      className="py-5 w-full text-center m-0 bg-green-200"
       data-testid="list"
     >
       {posts.map((post) => (
