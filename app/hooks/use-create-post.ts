@@ -32,6 +32,7 @@ export function useCreatePost() {
       const data = await response.json();
       return data;
     } catch (error) {
+      // @ts-ignore
       setError(error.message);
     } finally {
       setLoading(false);
