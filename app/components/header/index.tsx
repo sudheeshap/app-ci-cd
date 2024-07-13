@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Header = () => {
@@ -8,20 +9,27 @@ const Header = () => {
     >
       <ul className="flex justify-center items-center">
         <li>
-          <button className="bg-slate-200 rounded-lg p-3 m-2">
+          <Link href="/restaurants" className="bg-slate-200 rounded-lg p-3 m-2">
             Restaurants
-          </button>
+          </Link>
         </li>
         <li>
-          <button className="bg-slate-200 rounded-lg p-3 m-2">Contacts</button>
+          <Link href="/contacts" className="bg-slate-200 rounded-lg p-3 m-2">
+            Contacts
+          </Link>
         </li>
         <li>
-          <button className="bg-slate-200 rounded-lg p-3 m-2">Rewards</button>
+          <Link href="/rewards" className="bg-slate-200 rounded-lg p-3 m-2">
+            Rewards
+          </Link>
         </li>
         <li>
-          <button className="bg-slate-200 rounded-lg p-3 m-2">
-            Subscription
-          </button>
+          <Link
+            href="/subscriptions"
+            className="bg-slate-200 rounded-lg p-3 m-2"
+          >
+            Subscriptions
+          </Link>
         </li>
       </ul>
     </div>

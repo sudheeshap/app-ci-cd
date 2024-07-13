@@ -3,19 +3,22 @@
 import React from 'react';
 
 import { usePosts } from '@/app/hooks/use-posts';
+import Link from 'next/link';
 
 const List = () => {
   const { posts } = usePosts();
 
   return (
     <div
-      className="py-5 w-full text-center m-0 bg-green-200"
+      className="w-full text-center m-0 bg-gray-100 px-3 py-2"
       data-testid="list"
     >
       {posts.map((post) => (
-        <div key={post.id} data-testid="post">
-          {post.title}
-        </div>
+        <Link key={post.id} href={`/posts/${post.id}`}>
+          <div data-testid="post" className="p-20 bg-white m-2">
+            {post.title}
+          </div>
+        </Link>
       ))}
     </div>
   );
