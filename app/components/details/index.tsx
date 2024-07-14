@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import SignupForm from '../signup-form';
+import Image from 'next/image';
 
 const DetailsPage = ({ title }: { title: string }) => {
   return (
@@ -9,11 +10,11 @@ const DetailsPage = ({ title }: { title: string }) => {
       <Link href="/" className="text-sky-600 my-3">
         Home
       </Link>
-      <img
-        src="https://via.placeholder.com/200"
+      <Image
+        src={'https://via.placeholder.com/200'}
+        width={200}
+        height={200}
         alt="placeholder"
-        width="200"
-        height="200"
       />
       <SignupForm />
     </div>
