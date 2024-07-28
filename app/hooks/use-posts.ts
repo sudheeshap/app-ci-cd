@@ -6,7 +6,7 @@ export function usePosts() {
 
   useEffect(() => {
     fetchPosts().then((data) => setPosts(data));
-  }, []);
+  }, [setPosts]);
 
   return { posts };
 }

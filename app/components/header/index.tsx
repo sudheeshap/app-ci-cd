@@ -4,7 +4,7 @@ import React from 'react';
 const Header = () => {
   return (
     <div
-      className="bg-slate-400 py-5 w-full text-center m-0"
+      className="bg-slate-400 py-5 w-full text-center m-0 text-black"
       data-testid="header"
     >
       <ul className="flex justify-center items-center">

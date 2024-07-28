@@ -10,7 +10,7 @@ const List = () => {
 
   return (
     <div
-      className="w-full text-center m-0 bg-gray-100 px-3 py-2"
+      className="w-full text-center m-0 bg-gray-100 text-black px-3 py-2"
       data-testid="list"
     >
       {posts.map((post) => (
