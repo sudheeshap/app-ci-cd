@@ -7,8 +7,8 @@ describe('Page', () => {
   it('renders a heading', () => {
     render(<Home />);
 
-    const heading = screen.getByTestId('header');
+    const title = screen.getByText(/Sign Up/);
 
-    waitFor(() => expect(heading).toBeInTheDocument());
+    waitFor(() => expect(title).not.toBeNull());
   });
 });
