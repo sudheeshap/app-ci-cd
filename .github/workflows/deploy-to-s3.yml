@@ -44,7 +44,8 @@ jobs:
 
       - name: Sync S3 bucket
         run: |
-          aws s3 sync out s3://${{ secrets.S3_BUCKET }} --delete
+          # Sync the build output to S3
+          aws s3 sync out/ s3://${{ secrets.S3_BUCKET }}/ --delete --exact-timestamps
 
       - name: Invalidate CloudFront cache
         run: |
