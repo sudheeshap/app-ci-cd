@@ -28,12 +28,12 @@ jobs:
       - name: Build Next.js app
         run: npm run build
 
-      - name: Rename .html files in build output
-        run: |
-          find out -type f -name '*.html' ! -name 'index.html' | while read -r file; do
-            new_name="${file%.html}"
-            mv "$file" "$new_name"
-          done
+      # - name: Rename .html files in build output
+      #   run: |
+      #     find out -type f -name '*.html' ! -name 'index.html' | while read -r file; do
+      #       new_name="${file%.html}"
+      #       mv "$file" "$new_name"
+      #     done
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
